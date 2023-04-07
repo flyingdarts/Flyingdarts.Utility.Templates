@@ -8,7 +8,7 @@ var serializer = new DefaultLambdaJsonSerializer(x => x.PropertyNameCaseInsensit
 // The function handler that will be called for each Lambda event
 var handler = async (APIGatewayProxyRequest request) =>
 {
-    var socketRequest = request.To<(MediatR-Request)>(serializer);
+    var socketRequest = request.To<$command$>(serializer);
     return await innerHandler.Handle();
 };
 

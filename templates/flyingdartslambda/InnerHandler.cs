@@ -15,7 +15,7 @@ public class InnerHandler
     {
         _mediator = mediator;
     }
-    public async Task<APIGatewayProxyResponse> Handle(SocketMessage<(MediatR-Request)> request)
+    public async Task<APIGatewayProxyResponse> Handle(SocketMessage<$command$> request)
     {
         throw new NotImplementedException();
     }

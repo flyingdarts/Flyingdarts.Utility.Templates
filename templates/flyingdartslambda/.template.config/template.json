@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Me",
+  "author": "Flyingdarts",
   "classifications": [
     "Flyingdarts",
     "TopLevelLambda"
@@ -14,11 +14,32 @@
   },
   "preferNameDirectory": true,
   "sourceName": "(Flying.Function.Name)",
+  "sources": [
+    {
+      "rename": {
+        "./CQRS/$command$.cs": "./CQRS/{{command}}.cs",
+        "./CQRS/$command$Handler.cs": "./CQRS/{{command}}Handler.cs",
+        "./CQRS/$command$Validator.cs": "./CQRS/{{command}}Validator.cs"
+      }
+    }
+  ],
   "symbols": {
     "command": {
       "type": "parameter",
       "description": "A MediatR request",
-      "replaces": "(MediatR-Request)"
+      "replaces": "$command$",
+      "fileRename": "$command$"
     }
-  }
+  },
+  "primaryOutputs": [
+    {
+      "path": "./CQRS/{{command}}.cs"
+    },
+    {
+      "path": "./CQRS/{{command}}Handler.cs"
+    },
+    {
+      "path": "./CQRS/{{command}}Validator.cs"
+    }
+  ]
 }
