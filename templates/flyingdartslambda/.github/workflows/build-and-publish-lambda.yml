@@ -1,4 +1,4 @@
-name: "Deploy Function"
+name: "Deploy (Flying.Function.Name)"
 on:
   push:
     branches: [ main ]

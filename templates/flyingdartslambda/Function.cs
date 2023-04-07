@@ -2,15 +2,16 @@ using Amazon.Lambda.Core;
 using Amazon.Lambda.RuntimeSupport;
 using Amazon.Lambda.Serialization.SystemTextJson;
 
+var innerHandler = new InnerHandler(mediator);
+var serializer = new DefaultLambdaJsonSerializer(x => x.PropertyNameCaseInsensitive = true);
+
 // The function handler that will be called for each Lambda event
-var handler = (string input, ILambdaContext context) =>
+var handler = async (APIGatewayProxyRequest request) =>
 {
-    return input.ToUpper();
+    var socketRequest = request.To<(MediatR Request)>(serializer);
+    return await innerHandler.Handle();
 };
 
-// Build the Lambda runtime client passing in the handler to call for each
-// event and the JSON serializer to use for translating Lambda JSON documents
-// to .NET types.
-await LambdaBootstrapBuilder.Create(handler, new DefaultLambdaJsonSerializer())
-        .Build()
-        .RunAsync();
+await LambdaBootstrapBuilder.Create(handler, serializer)
+    .Build()
+    .RunAsync();

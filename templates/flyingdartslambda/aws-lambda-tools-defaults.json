@@ -5,12 +5,12 @@
     "dotnet lambda help",
     "All the command line options for the Lambda command can be specified in this file."
   ],
-  "profile": "",
-  "region": "",
+  "profile": "default",
+  "region": "eu-west-1",
   "configuration": "Release",
   "function-runtime": "dotnet6",
   "function-memory-size": 256,
   "function-timeout": 30,
-  "function-handler": "flyingdartslambda",
+  "function-handler": "(Flying.Function.Name)",
   "msbuild-parameters": "--self-contained true"
 }

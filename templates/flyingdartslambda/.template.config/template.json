@@ -1,12 +1,33 @@
 {
-    "$schema": "http://json.schemastore.org/template",
-    "author": "Me",
-    "classifications": [ "Flyingdarts", "TopLevelLambda" ],
-    "identity": "FlyingdartsTemplate.TopLevelLambda",
-    "name": "Flyingdarts template: Lambda",
-    "shortName": "flyinglambda",
-    "tags": {
-      "language": "C#",
-      "type": "project"
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Me",
+  "classifications": [
+    "Flyingdarts",
+    "TopLevelLambda"
+  ],
+  "identity": "Flying.Lambda.Template",
+  "name": "Flyingdarts template: Lambda",
+  "shortName": "flyinglambda",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "preferNameDirectory": true,
+  "sourceName": "(Flying.Function.Name)",
+  "symbols": {
+    "command": {
+      "type": "parameter",
+      "datatype": "string",
+      "description": "A MediatR request",
+      "replaces": "(MediatR Request)"
     }
-  }
+  },
+  "postActions": [
+    {
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "continueOnError": false
+    }]
+}
