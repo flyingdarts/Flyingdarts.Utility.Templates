@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Authors>Flyingdarts</Authors>
+		<Description>A NuGet package with dotnet-new templates</Description>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<LicenseFile>LICENSE.md</LicenseFile>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+		<NoWarn>$(NoWarn);NU5128</NoWarn>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageId>Flyingdarts.Utility.Templates</PackageId>
+		<PackageProjectUrl>https://github.com/flyingdarts/Flyingdarts.Utility.Templates</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>Public release</PackageReleaseNotes>
+		<PackageTags>flyingdarts;dotnet-new;templates;lambda</PackageTags>
+		<PackageType>Template</PackageType>
+		<PackageVersion>1.0.0</PackageVersion>
+		<RepositoryUrl>https://github.com/flyingdarts/Flyingdarts.Utility.Templates.git</RepositoryUrl>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+		<Compile Remove="**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="icon.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+		<Content Include="README.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+		<Content Include="LICENSE.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+	</ItemGroup>
+
+</Project>

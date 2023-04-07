@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Me",
+    "classifications": [ "Flyingdarts", "TopLevelLambda" ],
+    "identity": "FlyingdartsTemplate.TopLevelLambda",
+    "name": "Flyingdarts template: Lambda",
+    "shortName": "flyinglambda",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    }
+  }
