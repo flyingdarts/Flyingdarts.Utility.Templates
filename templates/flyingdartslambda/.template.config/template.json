@@ -17,18 +17,8 @@
   "symbols": {
     "command": {
       "type": "parameter",
-      "datatype": "string",
       "description": "A MediatR request",
-      "replaces": "(MediatR Request)"
+      "replaces": "(MediatR-Request)"
     }
-  },
-  "postActions": [
-    {
-      "description": "Restore NuGet packages required by this project.",
-      "manualInstructions": [
-        { "text": "Run 'dotnet restore'" }
-      ],
-      "continueOnError": false,
-      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025"
-    }]
+  }
 }

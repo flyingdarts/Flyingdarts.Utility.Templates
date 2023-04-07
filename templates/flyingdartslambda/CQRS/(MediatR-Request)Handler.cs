@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Flyingdarts.Persistence;
 using MediatR;
 
-public class CreateRoomCommandHandler : IRequestHandler<(MediatR Request)>
+public class CreateRoomCommandHandler : IRequestHandler<(MediatR-Request)>
 {
     private readonly DynamoDbService _dynamoDbService;
 
@@ -12,7 +12,7 @@ public class CreateRoomCommandHandler : IRequestHandler<(MediatR Request)>
     {
         _dynamoDbService = dynamoDbService;
     }
-    public async Task Handle((MediatR Request) request, CancellationToken cancellationToken)
+    public async Task Handle((MediatR-Request) request, CancellationToken cancellationToken)
     {
        
     }
