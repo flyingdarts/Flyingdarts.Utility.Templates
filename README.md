@@ -1,7 +1,15 @@
-# Table of Contents
+# Flyingdarts.Utility.Templates
+Contains project templates for the dotnet-new tools
+## Installation
+Install the dotnet-new templates
 
-- [templates/](#templates)
+```pwsh
+dotnet new install Flyingdarts.Utility.Templates
+```
+## Usage
+Generate a boiler plate lambda function project
 
-## templates
-This folder contains...
+```pwsh
+dotnet new flyinglambda -n Flyingdarts.Backend.Rooms.OnJoin --command JoinRoomCommand
+```
 
