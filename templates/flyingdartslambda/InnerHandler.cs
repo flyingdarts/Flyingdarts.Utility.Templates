@@ -1,8 +1,8 @@
 using Amazon.Lambda.APIGatewayEvents;
 using Flyingdarts.Lambdas.Shared;
+using Flyingdarts.Shared;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.Threading.Tasks;
 
 public class InnerHandler
@@ -18,8 +18,9 @@ public class InnerHandler
     }
     public async Task<APIGatewayProxyResponse> Handle(SocketMessage<$command$> request)
     {
-        throw new NotImplementedException();
+        if (request?.Message is null)
+            throw new BadRequestException("Unable to parse request.", typeof($command$));
+        
+        return await _mediator.Send(request.Message);
     }
-
-     
 }
