@@ -9,5 +9,10 @@ dotnet new install Flyingdarts.Utility.Templates
 Generate a `flyinglambda` template 
 
 ### Parameters
-- (Required) `--name MyOrganization.Backend.EntityName.MeaningfullFunctionName` 
-- (Required) `--command CreateEntityNameCommand` 
+- (Required) `--name` 
+- (Required) `--command` 
+
+### Example
+```pwsh
+dotnet new flyinglambda --name Flyingdarts.Backend.Signalling.OnConnect --command OnConnectCommand
+```
