@@ -1,15 +1,13 @@
 # Flyingdarts.Utility.Templates
 Contains project templates for the dotnet-new tools
 ## Installation
-Install the dotnet-new templates
-
+Install from NuGet
 ```pwsh
 dotnet new install Flyingdarts.Utility.Templates
 ```
 ## Usage
-Generate a boiler plate lambda function project
+Generate a `flyinglambda` template 
 
-```pwsh
-dotnet new flyinglambda -n Flyingdarts.Backend.Rooms.OnJoin --command JoinRoomCommand
-```
-
+### Parameters
+- (Required) `--name MyOrganization.Backend.EntityName.MeaningfullFunctionName` 
+- (Required) `--command CreateEntityNameCommand` 

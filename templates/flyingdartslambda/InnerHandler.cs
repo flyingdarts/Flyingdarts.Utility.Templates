@@ -1,8 +1,9 @@
-using System;
-using System.Threading.Tasks;
 using Amazon.Lambda.APIGatewayEvents;
 using Flyingdarts.Lambdas.Shared;
 using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Threading.Tasks;
 
 public class InnerHandler
 {
@@ -11,12 +12,14 @@ public class InnerHandler
     public InnerHandler()
     {
     }
-    public InnerHandler(IMediator mediator)
+    public InnerHandler(ServiceProvider serviceProvider)
     {
-        _mediator = mediator;
+        _mediator = serviceProvider.GetRequiredService<IMediator>();
     }
     public async Task<APIGatewayProxyResponse> Handle(SocketMessage<$command$> request)
     {
         throw new NotImplementedException();
     }
+
+     
 }

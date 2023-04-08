@@ -1,6 +1,7 @@
-﻿using MediatR;
+﻿using Amazon.Lambda.APIGatewayEvents;
+using MediatR;
 
-public class $command$ : IRequest
+public class $command$ : IRequest<APIGatewayProxyResponse>
 {
 
 }
