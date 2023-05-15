@@ -41,5 +41,14 @@
     {
       "path": "./CQRS/{{command}}Validator.cs"
     }
-  ]
+  ],
+  "postActions": [{
+    "description": "Add projects to solution",
+    "manualInstructions": [ { "text": "Add generated project to solution manually." } ],
+    "args": {
+      "inRoot": true
+    },
+    "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+    "continueOnError": true
+  }]
 }
