@@ -16,7 +16,7 @@
 		<PackageReleaseNotes>Added parameter to dotnet-new command that accepts a name for the MediatR request class.</PackageReleaseNotes>
 		<PackageTags>flyingdarts;dotnet-new;templates;lambda</PackageTags>
 		<PackageType>Template</PackageType>
-		<PackageVersion>1.1.0</PackageVersion>
+		<PackageVersion>1.1.0.1</PackageVersion>
 		<RepositoryUrl>https://github.com/flyingdarts/Flyingdarts.Utility.Templates.git</RepositoryUrl>
 		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
