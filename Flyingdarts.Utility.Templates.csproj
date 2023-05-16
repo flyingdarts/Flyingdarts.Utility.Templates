@@ -13,10 +13,10 @@
 		<PackageProjectUrl>https://github.com/flyingdarts/Flyingdarts.Utility.Templates</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-		<PackageReleaseNotes>Added parameter to dotnet-new command that accepts a name for the MediatR request class.</PackageReleaseNotes>
+		<PackageReleaseNotes>Release ready template with boiler plate implementation of CQRS and a ServiceFactory to perform actions on a DynamoDb table.</PackageReleaseNotes>
 		<PackageTags>flyingdarts;dotnet-new;templates;lambda</PackageTags>
 		<PackageType>Template</PackageType>
-		<PackageVersion>1.2.0</PackageVersion>
+		<PackageVersion>1.2.1</PackageVersion>
 		<RepositoryUrl>https://github.com/flyingdarts/Flyingdarts.Utility.Templates.git</RepositoryUrl>
 		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
