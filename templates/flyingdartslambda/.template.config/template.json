@@ -47,7 +47,9 @@
     "manualInstructions": [ { "text": "Add generated project to solution manually." } ],
     "args": {
       "inRoot": true,
-      "exclude": [ "./CQRS/**" ]
+      "projectFiles": [
+        "./{{Flying.Function.Name}}.csproj"
+      ]
     },
     "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
     "continueOnError": true
