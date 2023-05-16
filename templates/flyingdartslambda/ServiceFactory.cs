@@ -1,8 +1,10 @@
 
-using System;
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DataModel;
 using Microsoft.Extensions.DependencyInjection;
-using MediatR;
 using FluentValidation;
+using Flyingdarts.Shared;
+using Microsoft.Extensions.Configuration;
 
 public static class ServiceFactory
 {
