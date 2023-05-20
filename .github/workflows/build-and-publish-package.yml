@@ -30,6 +30,7 @@ jobs:
         run: |
           REPO_NAME=$GITHUB_REPOSITORY
           echo "REPO_NAME_WITHOUT_DASHES=$(echo $REPO_NAME | sed 's/flyingdarts\///')" >> $GITHUB_ENV  
+          
       - name: Discord Webhook Action
         uses: tsickert/discord-webhook@v5.3.0
         with:
